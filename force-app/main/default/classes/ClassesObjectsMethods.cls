@@ -26,7 +26,7 @@
  * Math class: https://developer.salesforce.com/docs/atlas.en-us.apexref.meta/apexref/apex_methods_system_math.htm
  * Classes: https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_classes_understanding.htm
  *
- * @author Your Name
+ * @author Amy Ho
  */
 
 public with sharing class ClassesObjectsMethods {
@@ -230,10 +230,15 @@ public with sharing class ClassesObjectsMethods {
         // title
         // author
         // pages
+        public String title; 
+        public String author;
+        public Integer pages;
     
         // Book constructor to initialize the title and author
         public Book() {
             // Initialize the title and author
+            title = '';
+            author = '';
         }
     
         // Method that returns the details of the book
