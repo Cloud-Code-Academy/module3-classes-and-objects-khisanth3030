@@ -40,7 +40,9 @@ public with sharing class ClassesObjectsMethods {
      */
     public static List<String> practiceStringMethods() {
         // Initialize a String with 'Hello, Salesforce!'
-        
+        String str = 'Hello, Salesforce!';
+        List<String> results = new List<String>();
+
         // Get the length of the String        
         // Get a substring of the String of the first 5 characters
         // Convert the String to lower case
@@ -50,7 +52,11 @@ public with sharing class ClassesObjectsMethods {
         // In the second position add the substring
         // In the third position add the string in lower case
 
-        return null; // Replace null with the variable you used to store the result
+        results.add( String.valueOf( str.length()) );
+        results.add( str.substring(0,5));
+        results.add( str.toLowerCase() );
+
+        return results; // Replace null with the variable you used to store the result
     }
 
     /**
