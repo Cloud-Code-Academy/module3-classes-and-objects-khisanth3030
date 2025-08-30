@@ -177,10 +177,11 @@ public with sharing class ClassesObjectsMethods {
      * @return A integer between 50 and 100.
      */
     public static Integer generateRandomNumber() {
-        // Use Math class to generate number between 50 and 100
-
-        // Return the random integer
-        return null; // Replace null with the variable you used to store the result
+         
+        Double rando = Math.random() * 100;
+        Integer result = rando.intValue();
+        if ( result <= 50  ){ result += 50;}
+        return result; // Replace null with the variable you used to store the result
     }
 
     /**
