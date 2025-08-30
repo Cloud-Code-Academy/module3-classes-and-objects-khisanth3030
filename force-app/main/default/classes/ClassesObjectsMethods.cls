@@ -204,15 +204,25 @@ public with sharing class ClassesObjectsMethods {
      * @return The number of the day of the week for the given date.
      */
     public static String getDayOfWeek(DateTime dt) {
-        // Define a map of day of the week as a key and day number as the value
-        // Monday = 1, Tuesday = 2, etc.
 
+        String result;
         // Get the day name using .format('EEEE');
 
-        // Get the day number from the map using the day name
+        String dayName = dt.format('EEE');
 
+        // Get the day number from the map using the day name
+        switch on dayName {
+            when 'Mon' {result = '1';}
+            when 'Tue' {result = '2';}
+            when 'Wed' {result = '3';}
+            when 'Thu' {result = '4';}
+            when 'Fri' {result = '5';}
+            when 'Sat' {result = '6';}           
+            when 'Sun' {result = '7';}           
+            when else  {result = '0';}
+         }
         // Return the result as a string
-        return null; // Replace null with the variable you used to store the result
+        return result; // Replace null with the variable you used to store the result
     }
 
 
