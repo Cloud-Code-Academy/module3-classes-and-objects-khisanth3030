@@ -372,12 +372,17 @@ public with sharing class ClassesObjectsMethods {
         List<String> results = new List<String>();
         // Create a new instance of Person class
         // Name the person 'John Doe' and set the age to 28
+        Person myPerson = new Person('John Doe', 28);
 
         // Add the details of the person using the introduceYourself method
+        String intro = myPerson.introduceYourself();
+        results.add(intro);
 
         // Get the name of the person using the getter method and add it to the list
+        results.add( myPerson.getName() );
 
         // Get the age of the person using the getter method and add it to the list
+        results.add( myPerson.getAge().toString() );
         
         return results; // Replace null with the variable you used to store the result
     }
