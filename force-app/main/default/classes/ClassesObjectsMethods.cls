@@ -260,16 +260,17 @@ public with sharing class ClassesObjectsMethods {
         public Integer pages;
     
         // Book constructor to initialize the title and author
-        public Book() {
+        public Book(String iniTitle, String iniAuthor) {
             // Initialize the title and author
-            title = '';
-            author = '';
+            title = iniTitle;
+            author = iniAuthor;
         }
     
         // Method that returns the details of the book
         public String getBookDetails() {
             // return A string containing the details of the book in the format "Title: <title>, Author: <author>"
-            return null; // Replace null with the variable you used to store the result
+            return 'Title: ' + title + ', Author: ' + author; 
+            // Replace null with the variable you used to store the result
         }
     }
     
