@@ -1,4 +1,4 @@
-/**
+/*
  * The ClassesObjectsMethodsTest class is designed to test the functionality of the methods in the ClassesObjectsMethods class.
  * It houses a series of test methods, each tailored to validate the individual methods in the ClassesObjectsMethods class, ensuring their accuracy and correctness.
  * The Salesforce Assert class is widely used in these test methods to assert and validate the results.
@@ -184,7 +184,7 @@ public with sharing class ClassesObjectsMethodsTest {
         Assert.isNull(result, 'Year difference should be null if both dates are null');
     }
 
-    /* //UNCOMMENT TEST METHODS BELOW ONCE THE BOOK AND PERSON CLASSES ARE SET UP
+     //UNCOMMENT TEST METHODS BELOW ONCE THE BOOK AND PERSON CLASSES ARE SET UP
     @IsTest
     static void testBookClass() {
         // Initialize a new book instance
@@ -198,7 +198,7 @@ public with sharing class ClassesObjectsMethodsTest {
         String bookDetails = myBook.getBookDetails();
         Assert.areEqual('Title: 1984, Author: George Orwell', bookDetails, 'The book details should be correctly formatted');
     }
-    */
+    
 
     @IsTest
     static void testCreateAndGetBookDetails() {
@@ -212,7 +212,7 @@ public with sharing class ClassesObjectsMethodsTest {
         Assert.areEqual(expectedResult, result, 'The method should return the correct book details');
     }
 
-    /* //UNCOMMENT TEST METHODS BELOW ONCE THE BOOK AND PERSON CLASSES ARE SET UP
+    //UNCOMMENT TEST METHODS BELOW ONCE THE BOOK AND PERSON CLASSES ARE SET UP
     @IsTest
     static void testGenerateBookList() {
         // Create a Book instance
@@ -238,38 +238,38 @@ public with sharing class ClassesObjectsMethodsTest {
         Assert.areEqual(352, result[0].pages, 'Pages of book at index 0 should match');
         Assert.areEqual(256, result[1].pages, 'Pages of book at index 1 should match');
     }
-    */
+    
 
-    /* //UNCOMMENT TEST METHODS BELOW ONCE THE BOOK AND PERSON CLASSES ARE SET UP
+    //UNCOMMENT TEST METHODS BELOW ONCE THE BOOK AND PERSON CLASSES ARE SET UP
     @IsTest
     static void testPersonClass() {
         // Initialize a new Person instance
-        ClassesObjectsMethods.Person testPerson = new ClassesObjectsMethods.Person('John Doe', 25);
+        ClassesObjectsMethods.Person myPerson = new ClassesObjectsMethods.Person('John Doe', 25);
 
         // Check that the name and age were set correctly
-        Assert.areEqual('John Doe', testPerson.getName(), 'The name should be correctly set');
-        Assert.areEqual(25, testPerson.getAge(), 'The age should be correctly set');
+        Assert.areEqual('John Doe', myPerson.getName(), 'The name should be correctly set');
+        Assert.areEqual(25, myPerson.getAge(), 'The age should be correctly set');
 
         // Call the introduceYourself method and verify the result
-        String intro = testPerson.introduceYourself();
+        String intro = myPerson.introduceYourself();
         Assert.areEqual('Hello, my name is John Doe and I am 25 years old.', intro, 'The introduction should be correctly formatted');
 
         // Test the setter methods
-        testPerson.setName('Jane Doe');
-        testPerson.setAge(30);
+        myPerson.setName('Jane Doe');
+        myPerson.setAge(30);
 
         // Verify that the name and age have been updated correctly
-        Assert.areEqual('Jane Doe', testPerson.getName(), 'The name should be correctly updated');
-        Assert.areEqual(30, testPerson.getAge(), 'The age should be correctly updated');
+        Assert.areEqual('Jane Doe', myPerson.getName(), 'The name should be correctly updated');
+        Assert.areEqual(30, myPerson.getAge(), 'The age should be correctly updated');
 
         // Call the introduceYourself method again and verify the result
-        intro = testPerson.introduceYourself();
+        intro = myPerson.introduceYourself();
         Assert.areEqual('Hello, my name is Jane Doe and I am 30 years old.', intro, 'The updated introduction should be correctly formatted');
     }
-    */
+    
 
     @IsTest
-    static void testPersonDetails() {
+    static void myPersonDetails() {
         // Call the personDetails method and capture the return value
         List<String> resultDetails = ClassesObjectsMethods.personDetails();
 
@@ -291,7 +291,7 @@ public with sharing class ClassesObjectsMethodsTest {
         Assert.areEqual(expectedAge, resultDetails.get(2), 'The third element should be the expected age');
     }
 
-    /* UNCOMMENT TEST METHODS BELOW ONCE THE BOOK AND PERSON CLASSES ARE SET UP
+    // UNCOMMENT TEST METHODS BELOW ONCE THE BOOK AND PERSON CLASSES ARE SET UP
     @IsTest
     static void testCreatePerson() {
         // Define the name and age to use for testing
@@ -305,9 +305,9 @@ public with sharing class ClassesObjectsMethodsTest {
         Assert.areEqual(testName, resultPerson.getName(), 'The person\'s name should match the test name');
         Assert.areEqual(testAge, resultPerson.getAge(), 'The person\'s age should match the test age');
     }
-    */
+    
 
-    /* UNCOMMENT TEST METHODS BELOW ONCE THE BOOK AND PERSON CLASSES ARE SET UP
+    // UNCOMMENT TEST METHODS BELOW ONCE THE BOOK AND PERSON CLASSES ARE SET UP
     @IsTest
     static void testCreateMultiplePersons() {
         // Define a list of names and an age for testing
@@ -327,9 +327,9 @@ public with sharing class ClassesObjectsMethodsTest {
             Assert.areEqual(testAge, resultPersons[i].getAge(), 'The person\'s age should match the test age');
         }
     }
-    */
+    
 
-    /* UNCOMMENT TEST METHODS BELOW ONCE THE BOOK AND PERSON CLASSES ARE SET UP
+    // UNCOMMENT TEST METHODS BELOW ONCE THE BOOK AND PERSON CLASSES ARE SET UP
     @IsTest
     static void testGetOlderPerson() {
         // Create two Person objects with different ages
@@ -362,5 +362,5 @@ public with sharing class ClassesObjectsMethodsTest {
         // Check that the returned Person object is one of the two Persons
         Assert.isTrue(resultPerson == person1 || resultPerson == person2, 'The returned Person should be one of the two Persons');
     }
-    */
+    
 }
