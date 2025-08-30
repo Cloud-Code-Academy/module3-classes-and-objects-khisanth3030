@@ -236,10 +236,11 @@ public with sharing class ClassesObjectsMethods {
      * @return The a positive number years between the two dates, or null if either date is null.
      */
     public static Integer calculateYearDifference(Date d1, Date d2) {
-
+        Integer result = 0;
+        if ( d1 == null || d2 == null ) { return null;}
         // Subtract the difference in years
-
-        return null; // Replace null with the variable you used to store the result
+        result = d1.year() - d2.year();
+        return Math.abs(result); // Replace null with the variable you used to store the result
     }
 
     /**
