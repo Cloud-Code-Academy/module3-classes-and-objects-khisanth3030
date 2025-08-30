@@ -162,11 +162,12 @@ public with sharing class ClassesObjectsMethods {
      */
     public static Double calculateDifferenceOfSquares(Double a, Double b) {
         // Square the input numbers using the Math.pow() function
-
+        Double aSquared = Math.pow(a,2);
+        Double bSquared = Math.pow(b,2);
         // Calculate the absolute difference using Math.abs() function
 
         // Return the result
-        return null; // Replace null with the variable you used to store the result
+        return Math.abs( aSquared - bSquared ); // Replace null with the variable you used to store the result
     }
 
     /**
