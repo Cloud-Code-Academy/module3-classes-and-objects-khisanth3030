@@ -313,7 +313,7 @@ public with sharing class ClassesObjectsMethods {
 
         // Update the pages for A Brief History of Time to 256
         hawkingBook.pages = 256;
-        
+
         // Add the book to the list
         result.add(myBook1);
         result.add(hawkingBook);
@@ -330,20 +330,35 @@ public with sharing class ClassesObjectsMethods {
      */
     public class Person {
         // Declare private two instance variables - (TEXT) name and (Number) age
-        
+        public String name;
+        public Integer age;
+
         // Constructor to initialize the name and age
-    
+        public Person(String iniName, Integer iniAge){
+            name = iniName;
+            age = iniAge;
+        }
         // Method introduceYourself that returns the details of the person        
         // Return a string in the format "Hello, my name is <name> and I am <age> years old."
-        // For example, introduceYourself() should return a string like "Hello, my name is John Doe and I am 28 years old."
+        // For example, introduceYourself() should return a string like 
+        // "Hello, my name is John Doe and I am 28 years old."
+        public String introduceYourself(){
+            String result = 'Hello, my name is ' + name + ' and I am ' + age + ' years old.';
+            return result;
+        }
 
         // Getter method that returns the name of the person
+        public String getName(){return name;}
 
         // Getter method that returns the age of the person
+        public Integer getAge(){return age;}
 
         // Setter method that sets the name of the person
+        public void setName(String pName){name = pName;}
 
         // Setter method that sets the age of the person
+        public void setAge(Integer pAge){age = pAge;}
+
     }
 
     /**
@@ -364,7 +379,7 @@ public with sharing class ClassesObjectsMethods {
 
         // Get the age of the person using the getter method and add it to the list
         
-        return null; // Replace null with the variable you used to store the result
+        return results; // Replace null with the variable you used to store the result
     }
 
     /**
