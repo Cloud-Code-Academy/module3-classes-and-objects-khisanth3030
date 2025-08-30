@@ -89,8 +89,9 @@ public with sharing class ClassesObjectsMethods {
      * @return A string consisting of only unique words from the input sentence.
      */
     public static String removeDuplicateWords(String sentence) {
-        
+
         if (String.isBlank(sentence)) {return null;}
+
         // Split the sentence into words
         List<String> words = sentence.split(' ');
 
@@ -114,16 +115,15 @@ public with sharing class ClassesObjectsMethods {
      */
     public static Integer countVowels(String str) {
         // Initialize the result Integer
-
-        /*
-        for () {
-            // get individual characters from the string - hint use substring or split
-            // check if the character is a vowel
-            // if it is a vowel, increment the result Integer
-        }
-        */
-
-        return null; // Replace null with the variable you used to store the result
+        Integer result = 0;
+       
+        result += str.countMatches('a');
+        result += str.countMatches('e');
+        result += str.countMatches('i');
+        result += str.countMatches('o');
+        result += str.countMatches('u');
+        
+        return result; // Replace null with the variable you used to store the result
     }
 
     /**
